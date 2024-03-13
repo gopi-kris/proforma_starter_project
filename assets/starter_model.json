@@ -1,0 +1,129 @@
+{
+  "class": "Plan",
+  "meta": {
+    "svg": {
+      "width": 800,
+      "height": 400
+    }
+  },
+  "caption": "Plan",
+  "name": "plan",
+  "autonomous": true,
+  "dataDefinitions": [
+    {
+      "class": "Text",
+      "caption": "Is there good weather outside?",
+      "name": "good_weather",
+      "range": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "class": "Text",
+      "caption": "Is there potential for a hurricane?",
+      "name": "hurricane",
+      "range": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "class": "Text",
+      "caption": "Do you need to buy medicine?",
+      "name": "medicine",
+      "range": [
+        "Yes",
+        "No"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "class": "Enquiry",
+      "meta": {
+        "pos": {
+          "x": 45.52800337304697,
+          "y": 93.2320007089844
+        }
+      },
+      "caption": "Enquiry A",
+      "name": "enquiryA",
+      "sources": [
+        {
+          "class": "Source",
+          "type": "good_weather"
+        },
+        {
+          "class": "Source",
+          "type": "hurricane"
+        },
+        {
+          "class": "Source",
+          "type": "medicine"
+        }
+      ]
+    },
+    {
+      "class": "Decision",
+      "meta": {
+        "pos": {
+          "x": 239.12800928125029,
+          "y": 93.6079984316406
+        }
+      },
+      "caption": "Decision B",
+      "name": "decisionB",
+      "preCondition": "is_completed('enquiryA')",
+      "waitCondition": "is_finished('enquiryA')",
+      "candidates": [
+        {
+          "class": "Candidate",
+          "caption": "Go outside",
+          "name": "to_go",
+          "recommendCondition": "net_support('to_go')>0",
+          "arguments": [
+            {
+              "class": "Argument",
+              "caption": "The weather is good outside",
+              "support": 1,
+              "activeCondition": "good_weather=='Yes'"
+            },
+            {
+              "class": "Argument",
+              "caption": "You need to buy medicine",
+              "support": "++",
+              "activeCondition": "medicine=='Yes'"
+            },
+            {
+              "class": "Argument",
+              "caption": "There is a potential for hurricane",
+              "support": "--",
+              "activeCondition": "hurricane=='Yes'"
+            }
+          ]
+        },
+        {
+          "class": "Candidate",
+          "caption": "Don't go outside",
+          "name": "not_to_go",
+          "recommendCondition": "net_support('not_to_go')>0",
+          "arguments": [
+            {
+              "class": "Argument",
+              "caption": "The weather is bad outside",
+              "support": -1,
+              "activeCondition": "good_weather=='No'"
+            },
+            {
+              "class": "Argument",
+              "caption": "There is a potential for hurricane",
+              "support": "++",
+              "activeCondition": "hurricane=='Yes'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

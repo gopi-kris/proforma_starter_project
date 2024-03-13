@@ -4,10 +4,11 @@
 
 The following are instructions for setting up proformajs-vue and running a PROforma application locally.
 
-The instructions have been tested on Ubuntu 22.04 (Linux), however, this should work on other operating systems (Windows, MacOS) as well. The steps for installing dependencies will
-vary from one operating system to another.
+The instructions have been tested on Ubuntu 22.04 (Linux), however, proformajs-vue will work on other operating systems (Windows, MacOS) as well. 
 
-A fresh installation of Ubuntu 22.04 on a virtual machine should also help to avoid dependency issues with your local development environment.
+The steps for installing dependencies will vary from one operating system to another.
+
+A fresh installation of Ubuntu 22.04 on a virtual machine should help to avoid dependency issues with your local development environment.
 
 ## Software dependencies
 
