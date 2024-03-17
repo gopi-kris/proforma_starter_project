@@ -100,6 +100,12 @@
               "caption": "There is a potential for hurricane",
               "support": "--",
               "activeCondition": "hurricane=='Yes'"
+            },
+            {
+              "class": "Argument",
+              "caption": "The weather is bad outside",
+              "support": -1,
+              "activeCondition": "good_weather=='No'"
             }
           ]
         },
@@ -112,7 +118,7 @@
             {
               "class": "Argument",
               "caption": "The weather is bad outside",
-              "support": -1,
+              "support": 1,
               "activeCondition": "good_weather=='No'"
             },
             {

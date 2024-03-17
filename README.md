@@ -4,11 +4,12 @@
 
 The following are instructions for setting up proformajs-vue and running a PROforma application locally.
 
-The instructions have been tested on Ubuntu 22.04 (Linux), however, proformajs-vue will work on other operating systems (Windows, MacOS) as well. 
+The instructions have been tested on Ubuntu 22.04 (Linux), however, proformajs-vue will work on other operating systems (Windows, MacOS) as well.
 
 The steps for installing dependencies will vary from one operating system to another.
 
-A fresh installation of Ubuntu 22.04 on a virtual machine should help to avoid dependency issues with your local development environment.
+A fresh installation of Ubuntu 22.04 on a [virtual machine](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) should help to
+avoid dependency issues with your local development environment.
 
 ## Software dependencies
 
@@ -116,4 +117,13 @@ VITE v3.2.5 ready in 238 ms
 Open the URL [http://localhost:5173/](http://localhost:5173/) in a browser, and you should see something similar to the screenshot below.
 ![proformajs-vue_start.png](assets%2Fproformajs-vue_start.png)
 
-CTRL+C in the terminal to exit proformajs-vue (if needed). 
+## Load starter model in proformajs-vue
+
+- Copy and paste the contents in [starter_model.json](https://github.com/gopi-kris/proforma_starter_project/blob/main/assets/starter_model.json) file to the Code section of
+  proformajs-vue.
+- Click Review to execute the model.
+  ![json_code.png](assets%2Fjson_code.png)
+
+## Exit proformajs-vue
+
+- CTRL+C in the terminal to exit proformajs-vue.
