@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The following are instructions for setting up proformajs-vue and running a PROforma application locally.
+The following are instructions for setting up proformajs-vue3 and running a PROforma application locally.
 
-The instructions have been tested on Ubuntu 22.04 (Linux), however, proformajs-vue will work on other operating systems (Windows, MacOS) as well.
+The instructions have been tested on Ubuntu 22.04 (Linux), however, proformajs-vue3 will work on other operating systems (Windows, MacOS) as well.
 
 The steps for installing dependencies will vary from one operating system to another.
 
@@ -68,38 +68,39 @@ foo@bar:~$ sudo apt install -y nodejs
 ```
 
 Once installed you can run the following commands to test the installation and versions of node.js and npm.
-npm is Node Package Manager that allows the installation of packages to be used with Node.js, such as proformajs-vue.
+npm is Node Package Manager that allows the installation of packages to be used with Node.js, such as proformajs-vue3.
 
 ```console
 foo@bar:~$ node -v
-v18.19.1
+v18.20.4
 foo@bar:~$ npm -v
-10.2.4
+10.7.0
 ```
 
-## Clone proformajs-vue repo
+## Clone proformajs-vue3 repo
 
-Clone the [proformajs-vue git repository](https://gitlab.com/openclinical/proformajs-vue) to the home directory of the user (or any directory) on Ubuntu and complete installation.
+Clone the [proformajs-vue3 git repository](https://gitlab.com/openclinical/proformajs-vue3) to the home directory of the user (or any directory) on Ubuntu and complete installation.
 
 ```console
-foo@bar:~$ git clone https://gitlab.com/openclinical/proformajs-vue.git
+foo@bar:~$ git clone https://gitlab.com/openclinical/proformajs-vue3.git
 ```
 
-## Install proformajs-vue
+## Install proformajs-vue3
 
-Change directory to the directory where proformajs-vue repository was cloned
+Change directory to the directory where proformajs-vue3 repository was cloned
 
 ```console
-foo@bar:~$ cd proformajs-vue
+foo@bar:~$ cd proformajs-vue3
 ```
 
-Run the following command on the terminal to install proformajs-vue
+Run the following command on the terminal to install proformajs-vue3
 
 ```console
 foo@bar:~$ npm install
+foo@bar:~$ npm run build
 ```
 
-Run the following command on the terminal to run proformajs-vue
+Run the following command on the terminal to run proformajs-vue3
 
 ```console
 foo@bar:~$ npm run dev
@@ -108,22 +109,23 @@ foo@bar:~$ npm run dev
 If successful, you should see the following output:
 
 ```console
-VITE v3.2.5 ready in 238 ms
+VITE v4.5.3  ready in 230 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+  ➜  press h to show help
 ```
 
 Open the URL [http://localhost:5173/](http://localhost:5173/) in a browser, and you should see something similar to the screenshot below.
 ![proformajs-vue_start.png](assets%2Fproformajs-vue_start.png)
 
-## Load starter model in proformajs-vue
+## Load starter model in proformajs-vue3
 
 - Copy and paste the contents in [starter_model.json](https://github.com/gopi-kris/proforma_starter_project/blob/main/assets/starter_model.json) file to the Code section of
-  proformajs-vue.
+  proformajs-vue3.
 - Click Review to execute the model.
   ![json_code.png](assets%2Fjson_code.png)
 
-## Exit proformajs-vue
+## Exit proformajs-vue3
 
-- CTRL+C in the terminal to exit proformajs-vue.
+- CTRL+C or q in the terminal to exit proformajs-vue3.
